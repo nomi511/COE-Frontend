@@ -58,7 +58,7 @@ const Login = () => {
         const firebaseUser = userCredential.user;
         console.log("Logged In User: ", firebaseUser.uid);
 
-        const response = await axios.post('http://localhost:4000/api/auth/login', {
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND}/auth/login`, {
           email: formData.email,
           password: formData.password,
           role: formData.role,

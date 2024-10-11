@@ -5,7 +5,7 @@ import { storage } from '../firebaseConfig';
 import { ref, uploadBytes, getDownloadURL, deleteObject, getMetadata } from "firebase/storage";
 
 axios.defaults.withCredentials = true;
-const API_BASE_URL = 'http://localhost:4000/api';
+const API_BASE_URL = process.env.REACT_APP_BACKEND;
 
 const uploadPdf = async (file, userId) => {
   if (!file) return;

@@ -30,7 +30,9 @@ function App() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const API_BASE_URL = 'http://localhost:4000/api';
+  const API_BASE_URL = process.env.REACT_APP_BACKEND;
+
+  
 
   const handleAuthChecked = useCallback(() => {
     // console.log('App: handleAuthChecked called');

@@ -5,7 +5,7 @@ import 'jspdf-autotable';
 import { CSVLink } from 'react-csv';
 import { useUser } from '../context/UserContext';
 
-const API_BASE_URL = 'http://localhost:4000/api';
+const API_BASE_URL = process.env.REACT_APP_BACKEND;
 
 const ReportsView = () => {
   const [reports, setReports] = useState([]);

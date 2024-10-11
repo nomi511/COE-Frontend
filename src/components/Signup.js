@@ -110,7 +110,7 @@ const Signup = () => {
         const firebaseUser = userCredential.user;
 
         if (firebaseUser.uid) {
-          const response = await axios.post('http://localhost:4000/api/auth/signup', {
+          const response = await axios.post(`${process.env.REACT_APP_BACKEND}/auth/signup`, {
             ...formData,
             uid: firebaseUser.uid
           });
